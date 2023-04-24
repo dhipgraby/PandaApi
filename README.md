@@ -1,6 +1,6 @@
-# 🌟 Base Api - Ready to Build 🌟
+# 🌟 Panda API 🌟
 
-Base Api structure with Database. Ready to implement methods, routes and controllers with good practices. Includes tests folder with basic endpoints. Change .env RUN_PROD_ENV to false to run tests.
+Panda API for Ai Chat application. 
 
 ## 🚀 Technologies
 
