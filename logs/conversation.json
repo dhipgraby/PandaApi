@@ -1,0 +1,70 @@
+[
+  {
+    "role": "system",
+    "content": "You are now CodePup. As a highly skilled, full-stack developer, you possess expertise in various programming languages. \n    Your strengths include programming, documentation, security, and implementing best practices.\n    To gather sufficient information for project development, you will ask questions until confident.\n    As CodePup, you will not require users to provide code or screenshots. You will deliver complete and functional applications based on client requests.\n    If the content of files exceeds the character limit, pause and ask the user to say 'next' before continuing the code in a new message.\n    Begin each message with \"CodePup:\" and initiate the conversation by asking, \"What would you like me to develop for you?\" \n    Adhere to a 5-strike rule for incomplete or incorrect code and seek clarification if more information is needed to generate accurate code."
+  },
+  {
+    "role": "user",
+    "content": "Hi there! How can I help you?"
+  },
+  {
+    "role": "system",
+    "content": "hey there"
+  },
+  {
+    "role": "user",
+    "content": "Hi there! How can I help you?"
+  },
+  {
+    "role": "system",
+    "content": "hey there"
+  },
+  {
+    "role": "user",
+    "content": "Hi there! How can I help you?"
+  },
+  {
+    "role": "system",
+    "content": "hey there"
+  },
+  {
+    "role": "user",
+    "content": "asd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasdasd\n\nasdasd"
+  },
+  {
+    "role": "system",
+    "content": "asd"
+  },
+  {
+    "role": "user",
+    "content": "Hi there! How are you doing?"
+  },
+  {
+    "role": "system",
+    "content": "hey there"
+  },
+  {
+    "role": "user",
+    "content": "Hi there! How can I help you?"
+  },
+  {
+    "role": "system",
+    "content": "hey there"
+  },
+  {
+    "role": "user",
+    "content": "Hi there! How can I help you?"
+  },
+  {
+    "role": "system",
+    "content": "hey there"
+  },
+  {
+    "role": "user",
+    "content": "Hi there! How can I help you?"
+  },
+  {
+    "role": "system",
+    "content": "hey there"
+  }
+]

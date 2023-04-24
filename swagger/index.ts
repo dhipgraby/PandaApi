@@ -13,6 +13,7 @@ const files = [
     'welcome.json',
     'getUserById.json',
     'register.json',    
+    'AiCompletion.json',
 ];
 
 const swaggerDir = join(__dirname, '..', 'swagger');

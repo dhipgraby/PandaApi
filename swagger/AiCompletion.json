@@ -1,0 +1,82 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Chat API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/ai/chat": {
+            "post": {
+                "tags": [
+                    "Ai Completion"
+                ],
+                "summary": "Create a chat completion",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "question": {
+                                        "type": "string",
+                                        "example": "What is the capital of France?"
+                                    },
+                                    "conversationId": {
+                                        "type": "string",
+                                        "example": 12345
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Chat completion result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "comprehensionResult": {
+                                            "type": "string",
+                                            "example": "The capital of France is Paris."
+                                        },
+                                        "usage": {
+                                            "type": "object"
+                                        },
+                                        "isNew": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "docname": {
+                                            "type": "string",
+                                            "example": "conversation-12345"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Error comprehending code",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "error": {
+                                            "type": "string",
+                                            "example": "Error comprehending code"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

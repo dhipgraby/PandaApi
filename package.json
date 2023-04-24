@@ -37,11 +37,14 @@
     "typescript": "4.9.5"
   },
   "dependencies": {
+    "@dalenguyen/openai": "^0.11.3",
     "@prisma/client": "^4.13.0",
     "@types/swagger-jsdoc": "^6.0.1",
-    "@types/yamljs": "^0.2.31",    
+    "@types/yamljs": "^0.2.31",
+    "dotenv": "^16.0.3",
     "express": "^4.17.2",
     "express-static": "^1.2.6",
+    "openai": "^3.2.1",
     "serve": "^14.2.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.2",

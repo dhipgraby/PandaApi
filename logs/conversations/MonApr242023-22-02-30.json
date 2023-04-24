@@ -1,0 +1,13 @@
+[
+  {
+    "fileName": "MonApr242023-22-02-30.json"
+  },
+  {
+    "role": "user",
+    "content": "What is the capital of France?"
+  },
+  {
+    "role": "system",
+    "content": "The capital of France is Paris."
+  }
+]

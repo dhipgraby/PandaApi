@@ -1,0 +1,13 @@
+[
+  {
+    "fileName": "file4"
+  },
+  {
+    "role": "user",
+    "content": "hey there"
+  },
+  {
+    "role": "system",
+    "content": "Hello, how can I assist you today?"
+  }
+]
