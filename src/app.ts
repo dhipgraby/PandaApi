@@ -4,12 +4,19 @@ import swaggerUi from "swagger-ui-express";
 import { loadApiEndpoints } from "./controllers/api";
 import { loadTestApiEndpoints } from "./controllers/test/api";
 import loadSwagger from '../swagger';
+import cors from 'cors'; // Updated this lin
 
 // Create Express server
 const app = express();
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 // Express configuration
-app.set("port", process.env.PORT ?? 3000);
+app.set("port", process.env.PORT ?? 4000);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

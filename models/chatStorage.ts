@@ -110,7 +110,7 @@ async function updateConversation(
     const conversationContent = JSON.stringify(conversation, null, 2);
     fs.writeFileSync("./logs/conversations/" + FileName, conversationContent);
     return {
-        docname: FileName,
+        docname: conversation[0].fileName,
         isNew: isNew,
     };
 }

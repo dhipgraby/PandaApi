@@ -12,7 +12,6 @@ export default {
     getConversation: async (req: Request, res: Response) => {
         const conversationId = req.params.conversationId;
         
-
         if (conversationId == null || conversationId === "") {
             console.log("no conversation id");
             return res.status(404).json({ error: "conversation Id not found" });
