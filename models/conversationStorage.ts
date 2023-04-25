@@ -49,10 +49,14 @@ export async function createConversation(conversationName: string): Promise<{ fi
 export async function getConversation(conversationId: string): Promise<any> {
     try {
         const filePath = path.join(conversationsDirectory, conversationId);
+        console.log(filePath);
+        
         if (fs.existsSync(filePath)) {
             const rawData = fs.readFileSync(filePath, "utf8");
             return JSON.parse(rawData);
         } else {
+            console.log('no file');
+            
             return undefined;
         }
     } catch (error) {
@@ -93,6 +97,8 @@ export async function changeName(conversationName: string, newName: string): Pro
     
     try {
         const filePath = path.join(conversationsDirectory, conversationName);
+        console.log(filePath);
+        
         if (fs.existsSync(filePath)) {
             const rawData = fs.readFileSync(filePath, "utf8");
             let jsonData = JSON.parse(rawData);
