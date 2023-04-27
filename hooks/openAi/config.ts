@@ -16,7 +16,7 @@ const configuration = new Configuration({
 
 export const openai = new OpenAIApi(configuration);
 //LOGS
-export const promptHistory: boolean = false;
+export const promptHistory: boolean = true;
 export const updateFiles: boolean = true;
 //CONTEXT
 export const onlyContext: boolean = false;

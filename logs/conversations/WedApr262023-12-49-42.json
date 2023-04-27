@@ -1,0 +1,45 @@
+[
+  {
+    "fileName": "sofie"
+  },
+  {
+    "role": "user",
+    "content": "Hi im sofie nice meeting u"
+  },
+  {
+    "role": "system",
+    "content": "Hello Sofie, nice to meet you too! How can I assist you today?"
+  },
+  {
+    "role": "user",
+    "content": "I ve an interview today could you hep me?"
+  },
+  {
+    "role": "system",
+    "content": "Of course, I'll do my best to help you with your interview. Do you have any specific questions or concerns you'd like to discuss beforehand?"
+  },
+  {
+    "role": "user",
+    "content": "do you speak chinese"
+  },
+  {
+    "role": "system",
+    "content": "Yes, I can speak Chinese fluently. Is there anything I can help you with in Chinese?"
+  },
+  {
+    "role": "user",
+    "content": "我有一个面试你可以帮我吗， 公司的名字叫JD， 是中国的一家物流公司"
+  },
+  {
+    "role": "system",
+    "content": "好的，那我们来看一下须要提前准备的事项。首先，你需要了解JD这家公司的业务和文化，以及该职位的详细信息。确保你已经阅读过该公司的网站以及其他相关资料，同时也可以对该职位的要求有一定了解。另外，以下是一些可能的提问和你可以准备的答案：\n\n1.请简单介绍一下自己。\n\n2.请谈一谈你如何处理过重要且紧急的任务？\n\n3.请谈一谈你如何有效地沟通和协调团队工作？\n\n4.请谈一谈你的职业目标和愿景是什么？\n\n5.请介绍你的一些职场优点和缺点。你打算如何应对和改进你的缺点？\n\n6.请谈一谈你觉得在这个职位上最重要的技能和特质是什么？\n\n7.请谈一谈你在上一个工作经历中，你遇到的最大的挑战，以及你如何解决的。\n\n希望以上的信息能对你有所帮助! 加油！"
+  },
+  {
+    "role": "user",
+    "content": "我可以给你一下职位的信息"
+  },
+  {
+    "role": "system",
+    "content": "当然，了解职位信息会帮助我更好地为您提供更具体的建议。请告诉我您所申请的JD物流公司的职位名称以及职位描述。"
+  }
+]

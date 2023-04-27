@@ -1,3 +1,18 @@
+import { ChatCompletionRequestMessageRoleEnum } from "openai";
+
+export interface CompletionResult {
+    answer: string;
+    usage: any;
+    isNew: boolean;
+    docname: string;
+}
+
+export interface Conversation {
+    role: ChatCompletionRequestMessageRoleEnum;
+    content: string;
+    messages?: Conversation[];
+}
+
 export const codeAsisstance = {
     "role": "system",
     "content": `You are now Mr.Bob. As a highly skilled, full-stack developer, you possess expertise in various programming languages. 

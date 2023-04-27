@@ -281,5 +281,61 @@
   {
     "role": "system",
     "content": "Hi there! How can I assist you today?"
+  },
+  {
+    "role": "user",
+    "content": "hey there"
+  },
+  {
+    "role": "system",
+    "content": "Hello again! Is there anything I can do for you today?"
+  },
+  {
+    "role": "user",
+    "content": "do you remember my name?"
+  },
+  {
+    "role": "system",
+    "content": "Yes, your name is Jingjing Zhou."
+  },
+  {
+    "role": "user",
+    "content": "How old am I  ?"
+  },
+  {
+    "role": "system",
+    "content": "I do not have access to your personal information such as your age. Therefore, I cannot answer that question."
+  },
+  {
+    "role": "user",
+    "content": "Base on our previous conversatiopn what age i told you im ?"
+  },
+  {
+    "role": "system",
+    "content": "Based on our previous conversation, you have not mentioned your age. If you would like to share that information, I would be happy to keep it in mind for future conversations."
+  },
+  {
+    "role": "user",
+    "content": "how do you know my name?"
+  },
+  {
+    "role": "system",
+    "content": "Your name was provided as part of our conversation history. When you interact with me, I am able to store and retrieve information from our previous conversations, which includes your name."
+  },
+  {
+    "role": "user",
+    "content": "whats my city?"
+  },
+  {
+    "role": "system",
+    "content": "Based on our previous interactions, you are from Fuzhou, a city located in the south-east coast of China, in the Fujian province."
+  },
+  {
+    "role": "user",
+    "content": "how many years i have"
+  },
+  {
+    "role": "system",
+    "content": "I do not have access to your personal information such as your age. Therefore, I cannot answer that question."
   }
 ]
