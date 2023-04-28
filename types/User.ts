@@ -1,6 +1,7 @@
 export interface User {
   id: number;
   username: string;
+  email: string;
   wallet: string;
   registrationDate: Date;
   password: string;
@@ -9,6 +10,7 @@ export interface User {
 
 export interface NewUser {
   username: string;
+  email: string;
   wallet: string;
   registrationDate: Date;
   password: string;

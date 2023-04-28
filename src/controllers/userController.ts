@@ -4,12 +4,15 @@ import { userStorage } from "../../models/UserStorage";
 import {
   isValidUsername,
   isValidPassword,
+  isValidEmail,
+  emailError,
   nameError,
-  passwordError
+  passwordError,
+  hashPassword
 } from "../../helpers/validation";
 
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
-  const { username, wallet, password, balance } = req.body;
+  const { username, email, wallet, password, balance } = req.body;
 
   if (!isValidUsername(username)) {
     res.status(400).send({ message: nameError });
@@ -21,16 +24,26 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
     return;
   }
 
-  if (await userStorage.getUserByUsername(username) || await userStorage.getUserByWallet(wallet)) {
-    res.status(400).send({ message: "Username or wallet already exists" });
+  if (!isValidEmail(email)) {
+    res.status(400).send({ message: emailError });
+    return;
+  }
+
+  if (
+    await userStorage.getUserByUsername(username) ||
+    await userStorage.getUserByWallet(wallet) ||
+    await userStorage.getUserByEmail(email)
+  ) {
+    res.status(400).send({ message: "Username, email, or wallet already exists" });
     return;
   }
 
   const newUser: NewUser = {
     username,
+    email,
     wallet,
     registrationDate: new Date(),
-    password,
+    password: hashPassword(password), // password hashing
     balance
   };
 
@@ -38,7 +51,6 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
   res.status(201).send({ message: "User registered successfully", user: createdUser });
 };
-
 
 export const getUserById = async (req: Request, res: Response): Promise<void> => {
   const userId = parseInt(req.params.userId, 10);
@@ -51,5 +63,3 @@ export const getUserById = async (req: Request, res: Response): Promise<void> =>
 
   res.status(200).send({ user });
 };
-
-export { User, userStorage };

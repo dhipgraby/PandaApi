@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 import swaggerUi from "swagger-ui-express";
 import { loadApiEndpoints } from "./controllers/api";
-import { loadTestApiEndpoints } from "./controllers/test/api";
 import loadSwagger from '../swagger';
 import cors from 'cors'; // Updated this lin
 
@@ -27,6 +26,6 @@ const swaggerSpec = loadSwagger();
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-(process.env.RUN_PROD_ENV === "true") ? loadApiEndpoints(app) : loadTestApiEndpoints(app)
+loadApiEndpoints(app)
 
 export default app;

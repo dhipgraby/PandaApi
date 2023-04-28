@@ -24,6 +24,22 @@ class UserStorage {
     return await this.prisma.user.create({ data: user });
   }
 
+  async getUserByEmail(email: string): Promise<User | null> {
+    return await this.prisma.user.findUnique({ where: { email } });
+  }
+
+  async getUserByIdentifier(identifier: string): Promise<User | null> {
+    return await this.prisma.user.findFirst({
+      where: {
+        OR: [
+          { username: identifier },
+          { wallet: identifier },
+          { email: identifier },
+        ],
+      },
+    });
+  }
+
   async updateUserBalance(userId: number, newBalance: number): Promise<void> {
     await this.prisma.user.update({
       where: { id: userId },
