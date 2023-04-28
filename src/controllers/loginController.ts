@@ -42,3 +42,20 @@ export const getLoggedInUser = async (req: Request, res: Response): Promise<void
 
     res.status(200).send({ user });
 };
+
+export const logoutUser = async (req: Request, res: Response): Promise<void> => {
+    if (!req.session.userId) {
+      res.status(401).send({ message: "Not logged in" });
+      return;
+    }
+  
+    req.session.destroy((err) => {
+      if (err) {
+        res.status(500).send({ message: "Error logging out" });
+        return;
+      }
+  
+      res.status(200).send({ message: "User logged out successfully" });
+    });
+  };
+  
