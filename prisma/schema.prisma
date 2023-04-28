@@ -8,11 +8,20 @@ generator client {
 }
 
 model User {
-  id               Int      @id @default(autoincrement())
-  username         String   @unique
-  email         String   @unique
-  wallet           String   @unique
-  registrationDate DateTime
+  id               Int            @id @default(autoincrement())
+  username         String         @unique
+  email            String         @unique
+  wallet           String         @unique
+  registrationDate DateTime       @default(now())
+  lastLogin        DateTime       @default(now())
   password         String
   balance          Float  
+}
+
+model Conversation {
+  id           Int      @id @default(autoincrement())
+  uniqueId     String   @unique
+  userId       Int
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }

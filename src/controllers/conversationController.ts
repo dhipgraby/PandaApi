@@ -1,3 +1,4 @@
+//conversationController.ts
 import {
     deleteConversation,
     createConversation,
@@ -6,19 +7,20 @@ import {
     getAllConversations,
     changeName,
 } from "../../models/conversationStorage";
+
 import { Request, Response } from "express";
 
 export default {
     getConversation: async (req: Request, res: Response) => {
         const conversationId = req.params.conversationId;
-        
+
         if (conversationId == null || conversationId === "") {
             console.log("no conversation id");
             return res.status(404).json({ error: "conversation Id not found" });
         }
 
         const conversationData = await getConversation(conversationId);
-        
+
         if (conversationData == undefined || conversationData == null) {
             res.status(200).json({ error: "No file data" });
         } else {
@@ -40,8 +42,9 @@ export default {
     },
 
     createConversation: async (req: Request, res: Response) => {
+        if (!req.session.userId) return
         const conversationName = req.body.conversationName;
-        const create = await createConversation(conversationName);
+        const create = await createConversation(conversationName, req.session.userId);
         res.status(200).json({ content: create.content, fileName: create.fileName });
     },
 

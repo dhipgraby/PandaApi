@@ -13,7 +13,7 @@ export const loadApiEndpoints = (app: Application): void => {
       secret: "your-secret-key", // Replace with a secure key
       resave: false,
       saveUninitialized: false,
-      cookie: { secure: false }, // Set to true in production
+      cookie: { secure: false }, // Set to true in production      
     })
   );
 

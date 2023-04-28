@@ -1,6 +1,13 @@
 // models/conversationStorage.ts
 import fs from "fs";
 import path from "path";
+import {
+    createConversationDB,
+    getConversationDB,
+    getAllConversationsDB,
+    updateConversationDB,
+    deleteConversationDB
+} from "./conversationStorageDB"
 
 const conversationsDirectory = "./logs/conversations/";
 
@@ -10,10 +17,12 @@ export async function deleteConversation(conversationName: string): Promise<void
         fs.unlinkSync(File);
     } catch (error) {
         console.error("Error on deleting file :", error);
+        throw Error("Delete creating file")
     }
 }
 
-export async function createConversation(conversationName: string): Promise<{ fileName: string; content: any }> {
+export async function createConversation(conversationName: string, userId: number): Promise<{ fileName: string; content: any }> {
+
     if (conversationName == null || conversationName == "") {
         const date = new Date();
         conversationName = date
@@ -29,15 +38,22 @@ export async function createConversation(conversationName: string): Promise<{ fi
     }
 
     try {
+
+        const newConversation = await createConversationDB(userId);
+
+        if (!newConversation.uniqueId) {
+            throw Error("Error creating conversation file in db")
+        }
+
         if (!fs.existsSync(conversationsDirectory)) {
             fs.mkdirSync(conversationsDirectory, { recursive: true });
         }
-        const filePath = path.join(conversationsDirectory, `${conversationName}.json`);
+        const filePath = path.join(conversationsDirectory, `${newConversation.uniqueId}.json`);
         const content = JSON.stringify([{ fileName: conversationName }], null, 2);
         fs.writeFileSync(filePath, content);
         console.log("Conversation file created successfully:", filePath);
         return {
-            fileName: `${conversationName}.json`,
+            fileName: `${conversationName}`,
             content: JSON.parse(content),
         };
     } catch (error) {
@@ -49,13 +65,13 @@ export async function createConversation(conversationName: string): Promise<{ fi
 export async function getConversation(conversationId: string): Promise<any> {
     try {
         const filePath = path.join(conversationsDirectory, conversationId);
-                
+
         if (fs.existsSync(filePath)) {
             const rawData = fs.readFileSync(filePath, "utf8");
             return JSON.parse(rawData);
         } else {
             console.log('no file');
-            
+
             return undefined;
         }
     } catch (error) {
@@ -93,10 +109,10 @@ export async function getAllConversations(): Promise<{ fileName: string; docname
 }
 
 export async function changeName(conversationName: string, newName: string): Promise<void> {
-    
+
     try {
         const filePath = path.join(conversationsDirectory, conversationName);
-        
+
         if (fs.existsSync(filePath)) {
             const rawData = fs.readFileSync(filePath, "utf8");
             let jsonData = JSON.parse(rawData);
