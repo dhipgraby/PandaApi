@@ -12,6 +12,7 @@ import { Request, Response } from "express";
 
 export default {
     getConversation: async (req: Request, res: Response) => {
+        if (!req.session.userId) return
         const conversationId = req.params.conversationId;
 
         if (conversationId == null || conversationId === "") {
@@ -19,7 +20,7 @@ export default {
             return res.status(404).json({ error: "conversation Id not found" });
         }
 
-        const conversationData = await getConversation(conversationId);
+        const conversationData = await getConversation(conversationId, req.session.userId);
 
         if (conversationData == undefined || conversationData == null) {
             res.status(200).json({ error: "No file data" });
@@ -29,15 +30,17 @@ export default {
     },
 
     setConversation: async (req: Request, res: Response) => {
+        if (!req.session.userId) return
         const conversationId = req.params.conversationId;
         const conversation = req.body.conversation;
 
-        await setConversation(conversationId, conversation);
+        await setConversation(conversationId, conversation, req.session.userId);
         res.status(200).json({ message: "Conversation updated successfully." });
     },
 
-    getAllConversations: async (_req: Request, res: Response) => {
-        const all_conversations = await getAllConversations();
+    getAllConversations: async (req: Request, res: Response) => {
+        if (!req.session.userId) return
+        const all_conversations = await getAllConversations(req.session.userId);
         res.status(200).json({ allConversations: all_conversations });
     },
 
@@ -49,16 +52,18 @@ export default {
     },
 
     deleteConversation: async (req: Request, res: Response) => {
+        if (!req.session.userId) return
         const conversationId = req.params.conversationId;
-        await deleteConversation(conversationId);
+        await deleteConversation(conversationId, req.session.userId);
         res.status(200).json({ content: [], fileName: "" });
     },
 
     changeName: async (req: Request, res: Response) => {
+        if (!req.session.userId) return
         const conversationId = req.params.conversationId;
         const newName = req.body.newName;
 
-        await changeName(conversationId, newName);
+        await changeName(conversationId, newName, req.session.userId);
         res.status(200).json({ message: "File name changed!", status: 200 });
     },
 };

@@ -14,10 +14,11 @@ export async function createConversationDB(userId: number): Promise<Conversation
   });
 }
 
-export async function getConversationDB(uniqueId: string): Promise<Conversation | null> {
-  return await prisma.conversation.findUnique({
+export async function getConversationDB(uniqueId: string, userId: number): Promise<Conversation | null> {
+  return await prisma.conversation.findFirst({
     where: {
       uniqueId,
+      userId
     },
   });
 }
